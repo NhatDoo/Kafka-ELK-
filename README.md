@@ -1,6 +1,6 @@
-# 🐳 Kafka + ELK Stack trên MacBook (Apple Silicon - M1/M2/M3)
+# Kafka + ELK Stack trên MacBook (Apple Silicon - M1/M2/M3)
 
-## 📌 Giới thiệu
+##  Giới thiệu
 
 Dự án này cung cấp môi trường **Kafka + ELK Stack (Elasticsearch, Logstash, Kibana)** được cấu hình sẵn bằng **Docker Compose**, tối ưu cho **MacBook sử dụng Apple Silicon (M1/M2/M3)**.
 
@@ -13,7 +13,7 @@ Mục tiêu:
 
 ---
 
-## 🧠 Kiến trúc hệ thống
+##  Kiến trúc hệ thống
 
 ```text
 Producer → Kafka → Logstash → Elasticsearch → Kibana
@@ -27,7 +27,7 @@ Producer → Kafka → Logstash → Elasticsearch → Kibana
 
 ---
 
-## ⚙️ Công nghệ sử dụng
+##  Công nghệ sử dụng
 
 * Kafka + Zookeeper
 * Elasticsearch
@@ -37,7 +37,7 @@ Producer → Kafka → Logstash → Elasticsearch → Kibana
 
 ---
 
-## 🍏 Tương thích Apple Silicon
+##  Tương thích Apple Silicon
 
 Dự án được cấu hình để chạy ổn định trên:
 
@@ -50,7 +50,7 @@ Lưu ý:
 
 ---
 
-## 🛠️ Yêu cầu hệ thống
+##  Yêu cầu hệ thống
 
 * Docker Desktop (>= 4.x)
 * RAM khuyến nghị: **8GB+**
@@ -58,9 +58,9 @@ Lưu ý:
 
 ---
 
-## 🚀 Hướng dẫn cài đặt & chạy
+##  Hướng dẫn cài đặt & chạy
 
-### 1️⃣ Clone project
+### 1️ Clone project
 
 ```bash
 git clone <your-repo>
@@ -69,7 +69,7 @@ cd <project-folder>
 
 ---
 
-### 2️⃣ Khởi động hệ thống
+### 2️ Khởi động hệ thống
 
 ```bash
 docker-compose up -d
@@ -77,7 +77,7 @@ docker-compose up -d
 
 ---
 
-### 3️⃣ Kiểm tra service
+### 3️ Kiểm tra service
 
 * Kafka: `localhost:9092`
 * Elasticsearch: http://localhost:9200
@@ -85,9 +85,9 @@ docker-compose up -d
 
 ---
 
-## 📊 Sử dụng
+##  Sử dụng
 
-### 🔹 Gửi message vào Kafka
+###  Gửi message vào Kafka
 
 Bạn có thể dùng CLI:
 
@@ -99,7 +99,7 @@ docker exec -it kafka kafka-console-producer \
 
 ---
 
-### 🔹 Consume message
+###  Consume message
 
 ```bash
 docker exec -it kafka kafka-console-consumer \
@@ -110,7 +110,7 @@ docker exec -it kafka kafka-console-consumer \
 
 ---
 
-### 🔹 Logstash Pipeline
+### Logstash Pipeline
 
 Logstash sẽ:
 
@@ -120,7 +120,7 @@ Logstash sẽ:
 
 ---
 
-### 🔹 Kibana Dashboard
+### Kibana Dashboard
 
 Truy cập:
 👉 http://localhost:5601
@@ -145,7 +145,7 @@ Truy cập:
 
 ---
 
-## ⚠️ Lưu ý quan trọng
+##  Lưu ý quan trọng
 
 * Elasticsearch cần nhiều RAM → nếu lỗi, tăng memory Docker
 * Nếu Kafka không start:
@@ -156,7 +156,7 @@ Truy cập:
 
 ---
 
-## 🧪 Test nhanh hệ thống
+## Test nhanh hệ thống
 
 1. Start docker-compose
 2. Gửi message vào Kafka
@@ -165,7 +165,7 @@ Truy cập:
 
 ---
 
-## 🚀 Hướng phát triển
+## Hướng phát triển
 
 * Thêm schema registry (Avro)
 * Thêm monitoring (Prometheus + Grafana)
